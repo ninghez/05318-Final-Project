@@ -1,0 +1,28 @@
+Convolutional Neural Network, also known as CNN, is an algorithm used to classify images by recognizing pattern in data. CNN utilizes convolutional layers to capture features from images, which makes it very well-suited to learn from image data. In this application, you'll see how a CNN performs image classification using character recognition as an example. 
+|
+The input layer is the input data, which is usually an image made of some pixels.
+|
+Convolutional layers serve purpose of feature extraction. CNNs capture better representations of the input data.
+To retrieve features from the input image, kernels (also known as filters) are used. As shown in the illustration below, the kernel is the yellow sliding window.
+|
+Pooling helps reduce the dimensionality of data which can decrease the computational time of the model.
+Max-pooling extracts the maximum value from the filter while average pooling takes the average.
+The illustration below shows an example of max-pooling and average pooling. 
+|
+An activation function is added at the end of the network or after convolution layers. It determines what data goes through to the next layer and what does not; this helps add non-linearity to the network.  
+|
+Fully connected layers are used to classify data into their respective classes. They serve as a classification function with the extracted features from the convolutional layers as input and the classified label as the output. In a fully connected layer, every neuron is connected to every other neuron in the previous layer. 
+|
+This CNN model is made up of two pairs of convolutional and max pooling layers with one dense layer at the end. 
+
+Input layer: A 28x28 pixel image of the character/digit
+Convolution layer(1): A convolution layer with 32 filters of size 3x3 that has an ReLU activation function
+Max-pooling layer(1): A max-pooling layer with a pool size of 2x2 with a stride of 2
+Convolution layer(2): A convolution layer with 64 filters of size 2x2 that has an ReLU activation function
+Max-pooling layer(2): A max-pooling layer with a pool size of 2x2 with a stride of 2
+Flatten layer: This layer flattens the input into a one dimensional vector
+Dense layer(1): A dense layer of 128 neurons with a ReLU activation function
+Dense layer(2): A dense layer of 36 neurons with a softmax activation function which determines the output character
+
+The following images present the model's architecture and the model's mean kernels from its two convolutional layers.
+|
