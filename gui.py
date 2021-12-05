@@ -241,11 +241,11 @@ class App(tk.Tk):
         #about activation #about fc
         self.place_text("Activation", about_activation,frame, wrapw)
         self.place_text("Fully Connected Layer", about_fc,frame, wrapw)
- 
+  
     def upload(self):
         #resize into square -> canvas size (if needed)
         #auto predict
-        filename=askopenfilename(filetypes=[('JPG Images','.jpg'),
+        filename=askopenfilename(filetypes=[('All files','*.*'),('JPG Images','.jpg'),
             ('JPEG Images','.jpeg'),('PNG Images','.png')])
         if filename is None:
             return 
